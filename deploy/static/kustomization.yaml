@@ -1,0 +1,6 @@
+resources:
+  - starboard.yaml
+images:
+  - name: docker.io/khulnasoft/starboard-operator
+    newName: docker.io/khulnasoft/starboard-operator
+    newTag: dev
