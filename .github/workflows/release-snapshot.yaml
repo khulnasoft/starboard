@@ -57,7 +57,6 @@ jobs:
         if: failure()
         with:
           github-token: ${{ secrets.ORG_REPO_TOKEN }}
-          ms-teams-webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
           notification-summary: vulnerabilities has been found in starboard-operator image
           notification-color: 17a2b8
           timezone: America/Denver
