@@ -103,7 +103,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title={{ .ProjectName }}"
       - "--label=org.opencontainers.image.description=Command line interface for Starboard"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -121,33 +121,33 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
       - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
       - "--platform=linux/amd64"
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-amd64"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.ubi8
-    goarch: amd64
-    ids:
-      - starboard-operator
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/amd64"
-    extra_files:
-      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-amd64"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.ubi8
+#    goarch: amd64
+#    ids:
+#      - starboard-operator
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/amd64"
+#    extra_files:
+#      - LICENSE
   - image_templates:
       - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi9-amd64"
     use: buildx
@@ -159,7 +159,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -178,8 +178,8 @@ dockers:
       - starboard-scanner-khulnasoft
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-scanner-khulnasoft"
-      - "--label=org.opencontainers.image.description=Khulnasoft scanner for Starboard"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.description=KhulnaSoft scanner for Starboard"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -197,33 +197,33 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
       - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
       - "--platform=linux/arm64"
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-arm64"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.ubi8
-    goarch: arm64
-    ids:
-      - starboard-operator
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/arm64"
-    extra_files:
-      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-arm64"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.ubi8
+#    goarch: arm64
+#    ids:
+#      - starboard-operator
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/arm64"
+#    extra_files:
+#      - LICENSE
   - image_templates:
       - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi9-arm64"
     use: buildx
@@ -235,7 +235,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -255,7 +255,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -273,33 +273,33 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
       - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
       - "--platform=linux/ppc64le"
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-s390x"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.ubi8
-    goarch: s390x
-    ids:
-      - starboard-operator
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/s390x"
-    extra_files:
-      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-s390x"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.ubi8
+#    goarch: s390x
+#    ids:
+#      - starboard-operator
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/s390x"
+#    extra_files:
+#      - LICENSE
   - image_templates:
       - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi9-s390x"
     use: buildx
@@ -311,7 +311,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -320,26 +320,26 @@ dockers:
       - "--platform=linux/s390x"
     extra_files:
       - LICENSE
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-ppc64le"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.ubi8
-    goarch: ppc64le
-    ids:
-      - starboard-operator
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/ppc64le"
-    extra_files:
-      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-ppc64le"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.ubi8
+#    goarch: ppc64le
+#    ids:
+#      - starboard-operator
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/ppc64le"
+#    extra_files:
+#      - LICENSE
   - image_templates:
       - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi9-ppc64le"
     use: buildx
@@ -351,7 +351,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -360,26 +360,26 @@ dockers:
       - "--platform=linux/ppc64le"
     extra_files:
       - LICENSE
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-amd64"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
-    goarch: amd64
-    ids:
-      - starboard-operator-fips
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/amd64"
-    extra_files:
-      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-amd64"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
+#    goarch: amd64
+#    ids:
+#      - starboard-operator-fips
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/amd64"
+#    extra_files:
+#      - LICENSE
   - image_templates:
       - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi9-fips-amd64"
     use: buildx
@@ -391,7 +391,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -400,66 +400,66 @@ dockers:
       - "--platform=linux/amd64"
     extra_files:
       - LICENSE
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-arm64"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
-    goarch: arm64
-    ids:
-      - starboard-operator-fips
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/arm64"
-    extra_files:
-      - LICENSE
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-s390x"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
-    goarch: s390x
-    ids:
-      - starboard-operator-fips
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/s390x"
-    extra_files:
-      - LICENSE
-  - image_templates:
-      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-ppc64le"
-    use: buildx
-    goos: linux
-    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
-    goarch: ppc64le
-    ids:
-      - starboard-operator-fips
-    build_flag_templates:
-      - "--label=org.opencontainers.image.title=starboard-operator"
-      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
-      - "--label=org.opencontainers.image.version={{ .Version }}"
-      - "--label=org.opencontainers.image.created={{ .Date }}"
-      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
-      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
-      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
-      - "--platform=linux/ppc64le"
-    extra_files:
-      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-arm64"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
+#    goarch: arm64
+#    ids:
+#      - starboard-operator-fips
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/arm64"
+#    extra_files:
+#      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-s390x"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
+#    goarch: s390x
+#    ids:
+#      - starboard-operator-fips
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/s390x"
+#    extra_files:
+#      - LICENSE
+#  - image_templates:
+#      - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-ppc64le"
+#    use: buildx
+#    goos: linux
+#    dockerfile: build/starboard-operator/Dockerfile.fips.ubi8
+#    goarch: ppc64le
+#    ids:
+#      - starboard-operator-fips
+#    build_flag_templates:
+#      - "--label=org.opencontainers.image.title=starboard-operator"
+#      - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
+#      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
+#      - "--label=org.opencontainers.image.version={{ .Version }}"
+#      - "--label=org.opencontainers.image.created={{ .Date }}"
+#      - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
+#      - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
+#      - "--label=org.opencontainers.image.documentation=https://khulnasoft.github.io/starboard/v{{ .Version }}/"
+#      - "--platform=linux/ppc64le"
+#    extra_files:
+#      - LICENSE
   - image_templates:
       - "docker.io/khulnasoft/starboard-operator:{{ .Version }}-ubi9-fips-amd64"
     use: buildx
@@ -471,7 +471,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -491,7 +491,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -511,7 +511,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -531,7 +531,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -551,7 +551,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -569,7 +569,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -587,7 +587,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -605,7 +605,7 @@ dockers:
     build_flag_templates:
       - "--label=org.opencontainers.image.title=starboard-operator"
       - "--label=org.opencontainers.image.description=Keeps Starboard resources updated"
-      - "--label=org.opencontainers.image.vendor=Khulnasoft Security"
+      - "--label=org.opencontainers.image.vendor=KhulnaSoft Security"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--label=org.opencontainers.image.created={{ .Date }}"
       - "--label=org.opencontainers.image.source=https://github.com/khulnasoft/starboard"
@@ -628,18 +628,18 @@ docker_manifests:
       - "khulnasoft/starboard-operator:{{ .Version }}-fips-arm64"
       - "khulnasoft/starboard-operator:{{ .Version }}-fips-s390x"
       - "khulnasoft/starboard-operator:{{ .Version }}-fips-ppc64le"
-  - name_template: "khulnasoft/starboard-operator:{{ .Version }}-ubi8"
-    image_templates:
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-amd64"
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-arm64"
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-s390x"
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-ppc64le"
-  - name_template: "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips"
-    image_templates:
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-amd64"
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-arm64"
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-s390x"
-      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-ppc64le"
+#  - name_template: "khulnasoft/starboard-operator:{{ .Version }}-ubi8"
+#    image_templates:
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-amd64"
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-arm64"
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-s390x"
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-ppc64le"
+#  - name_template: "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips"
+#    image_templates:
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-amd64"
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-arm64"
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-s390x"
+#      - "khulnasoft/starboard-operator:{{ .Version }}-ubi8-fips-ppc64le"
   - name_template: "khulnasoft/starboard-operator:{{ .Version }}-ubi9"
     image_templates:
       - "khulnasoft/starboard-operator:{{ .Version }}-ubi9-amd64"
