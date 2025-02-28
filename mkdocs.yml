@@ -93,14 +93,14 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCZd5NF4XJRaU-yfextsY-pw
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/KhulnasoftSecTeam
+      link: https://twitter.com/KhulnaSoft
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/khulnasoftteam/
+      link: https://www.linkedin.com/company/KhulnaSoft/
   version:
     provider: mike
   var:
-    prev_git_tag: "v0.15.19"
-    chart_version: 0.10.19
+    prev_git_tag: "v0.15.23"
+    chart_version: 0.10.22
 
 # Requires pip install mkdocs-macros-plugin
 plugins:

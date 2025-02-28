@@ -19,8 +19,8 @@ IMAGE_TAG := dev
 STARBOARD_CLI_IMAGE := khulnasoft/starboard:$(IMAGE_TAG)
 STARBOARD_OPERATOR_IMAGE := khulnasoft/starboard-operator:$(IMAGE_TAG)
 STARBOARD_SCANNER_KHULNASOFT_IMAGE := khulnasoft/starboard-scanner-khulnasoft:$(IMAGE_TAG)
-STARBOARD_OPERATOR_IMAGE_UBI8 := khulnasoft/starboard-operator:$(IMAGE_TAG)-ubi8
-STARBOARD_OPERATOR_IMAGE_UBI8_FIPS := khulnasoft/starboard-operator:$(IMAGE_TAG)-ubi8-fips
+#STARBOARD_OPERATOR_IMAGE_UBI8 := khulnasoft/starboard-operator:$(IMAGE_TAG)-ubi8
+#STARBOARD_OPERATOR_IMAGE_UBI8_FIPS := khulnasoft/starboard-operator:$(IMAGE_TAG)-ubi8-fips
 
 MKDOCS_IMAGE := khulnasoft/mkdocs-material:starboard
 MKDOCS_PORT := 8000
