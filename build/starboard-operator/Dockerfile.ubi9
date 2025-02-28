@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal
 
 LABEL name="Starboard" \
-      vendor="KhulnaSoft Security Software Ltd." \
+      vendor="Khulnasoft Security Software Ltd." \
       version="v0.15.20" \
       summary="Starboard Operator."
 
