@@ -1,8 +1,8 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal
 
 LABEL name="Starboard" \
-      vendor="Khulnasoft Security Software Ltd." \
-      version="v0.15.20" \
+      vendor="KhulnaSoft Security Software Ltd." \
+      version="v0.15.24" \
       summary="Starboard Operator."
 
 RUN microdnf install -y shadow-utils
